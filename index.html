@@ -1,11 +1,61 @@
-<script>
 
-fetch('city-market.md')
-  .then(function(response) {
-    return response.text();
-  })
-  .then(function(myText) {
-    console.log(myText);
-  });
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="yelpington.css">
+        <script src="yelpington.js" type="text/javascript"></script>
+        <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+    </head>
 
-</script>
+    <body>
+        <div class="pageGrid">
+    
+        <div id="title">
+            <img id="apptitle" class="pizza" src="pizza.svg">
+            <h1 id="apptitle">Yelpington!</h1>
+        </div>
+        <div id="searcharea">
+            <textarea id="input"></textarea>
+            <button id="searchbutton" onclick="search()">Search</button>
+        </div>
+    
+                <div id="restaurantlist">
+                    <ul>
+                        <li><a href="?name=august-first">August First</a></li>
+                        <li><a href="?name=city-market">City Market</a></li>
+                        <li><a href="?name=mr-mikes">Mr Mikes</a></li>
+                        <li><a href="?name=asiana-noodle-house">Asiana Noodle House</a></li>
+                        <li><a href="?name=church-street-tavern">Church Street Tavern</a></li>
+                        <li><a href="?name=new-moon">New Moon</a></li>
+                        <li><a href="?name=pizzeria-veritas">Pizzeria Veritas</a></li>
+                        <li><a href="?name=thai-dishes">Thai Dishes</a></li>
+                        <li><a href="?name=the-archives">The Archives</a></li>
+                        <li><a href="?name=splash-at-the-boathouse">Splash At The Boathouse</a></li>
+                        <li><a href="?name=kountry-kart-deli">Kountry Kart Deli</a></li>
+                        <li><a href="?name=muddy-waters">Muddy Waters</a></li>
+                        <li><a href="?name=alhi-babas-kabob-shop">Alhi Babas Kabob Shop</a></li>
+                    </ul>
+                </div>
+                <h2 class="center" id="restauranttitle"></h2>
+                <div id="restaurantinfo">
+                  <p class="bold center">Address</p>
+                  <p class="center" id="address"></p>
+                  <br>
+                  <p class="bold center">Phone Number</p>
+                  <p class="center" id="phonenumber"></p>
+                  <br>
+                  <p class="bold center">Hours</p>
+                  <p class="center" id="hours"></p>
+                  <br>
+                  <p class="bold center">Website</p>
+                  <p class="center" id="website"></p>
+                </div>
+                <div id="map"><iframe id="mapiframe" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-73.21847230196%2C44.474790279287014%2C-73.2162192463875%2C44.476221869233385&;layer=mapnik&;marker=44.4755063001236%2C-73.21734505" style="border: 1px solid black"></iframe></div>
+                
+                <p id="notes">notes</p>
+                
+        </div>
+    </body>
+
+</html>
