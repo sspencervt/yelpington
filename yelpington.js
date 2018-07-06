@@ -1,7 +1,6 @@
 'use strict'
 
-let params = new URLSearchParams(document.location.search.slice(1));
-let name = params.get("name");
+let name = document.location.pathname.slice(1);
 let myJson;
 
 changeDisplay();
@@ -32,7 +31,7 @@ function getInfo() {
 function search(myJson) {
     let input = document.getElementById('input').value.split(' ')
     input = input.join('-')
-    window.location.href = "http://localhost:5000/?name=" + input;
+    window.location.href = "http://localhost:5000/" + input;
 }
 
 //ACTIVATING 'ENTER' TO TRIGGER CLICK ON SEARCH BUTTON
@@ -42,8 +41,11 @@ function enterbutton() {
     enter.addEventListener("keyup", function(event) {
         event.preventDefault()
         if (event.keyCode === 13) {
+            document.getElementById('input').reset
             document.getElementById('searchbutton').click()
-        }
+
+                }
+                
     })
 }
 
