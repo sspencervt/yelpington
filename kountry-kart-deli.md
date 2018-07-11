@@ -6,7 +6,4 @@
 
 ** Hours: ** Monday - Sunday, 6:30 AM - 3 AM
 
-Reasonably priced deli that serves breakfast sandwiches all day.  Try the Shiner!
-
-
-
+Reasonably priced deli that serves breakfast sandwiches all day. Try the Shiner!

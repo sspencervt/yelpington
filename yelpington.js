@@ -5,6 +5,34 @@ let myJson;
 
 changeDisplay();
 
+
+getRestaurantList();
+
+function getRestaurantList() {
+    fetch('/all.json')
+        .then(function (response){
+            return response.json();
+        })
+        .then(function (restInfo){
+            populateRestList(restInfo)
+        })
+}
+
+function populateRestList(restInfo){
+    for(var element in restInfo){
+
+        let restTitle = restInfo[element].split('-');
+        let restaurantName = ''
+
+        for(var wordNumber in restTitle){
+            let titleCase = restTitle[wordNumber].toUpperCase().slice(0,1) + restTitle[wordNumber].slice(1);
+            restaurantName = restaurantName + titleCase + ' ';
+        }
+
+        document.getElementById("restLinks").innerHTML += '<li><a href="/' + restInfo[element] + '">' + restaurantName + '</a></li>';
+    }
+}
+
 //GRABBING INFO FROM JSON AND DISPLAYING UNDER DIVS
 
 function getInfo() {
@@ -68,6 +96,7 @@ function getMapInfo(myJson) {
 
             // var marker = L.marker([mapSource]).addTo(map);
         })
+        
 }
 
     function changeDisplay() {

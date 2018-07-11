@@ -23,7 +23,7 @@ h1 {
     color: black;
 }
 #title {
-    height: 50px;
+    height: 100px;
     grid-column: 1 / span 2;
     display: flex;
     flex-direction: row;
@@ -68,7 +68,7 @@ h1 {
 }
 
 #searcharea {
-    height: 50px;
+    height: 100px;
     justify-content: flex-end;
     display: flex;
     flex-direction: row;
@@ -78,13 +78,17 @@ h1 {
 
 /* LIST SECTION */
 
-#restaurantlist {
+#restLinks {
     grid-row: 2 / span 3;
     grid-column: 1;
     line-height: 40px;
     font-family: 'Quicksand', sans-serif;
     padding-left: 60px;
-    width: 250px;
+    width: 300px;
+}
+#restaurants {
+    margin-top: 40px;
+    font-size: 30px;
 }
 
 a {
